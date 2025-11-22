@@ -2,13 +2,21 @@
   "name": "is-strictly-seven",
   "version": "1.0.2",
   "description": "A simple utility to check if a number or string is seven.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "test": "vitest run",
     "prepare": "npm run build"
   },
@@ -22,6 +30,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^24.10.1",
+    "tsup": "^8.5.1",
     "typescript": "^5.9.3",
     "vitest": "^4.0.13"
   }
