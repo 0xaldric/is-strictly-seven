@@ -3,6 +3,6 @@
  * @param n - The number to check
  * @returns true if n is 7, false otherwise
  */
-export function isSeven(n: number): boolean {
-    return n === 7;
+export function isSeven(n: number | string): boolean {
+    return n === 7 || n === '7' || n === "7";
 }

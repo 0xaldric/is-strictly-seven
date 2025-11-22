@@ -16,4 +16,12 @@ describe('isSeven', () => {
     it('should return false for decimal 7.00001', () => {
         expect(isSeven(7.00001)).toBe(false);
     });
+
+    it('should return true for string 7', () => {
+        expect(isSeven('7')).toBe(true)
+    })
+
+    it('should return true for string double quote 7', () => {
+        expect(isSeven("7")).toBe(true)
+    })
 });
