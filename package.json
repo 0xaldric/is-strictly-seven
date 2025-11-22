@@ -1,6 +1,6 @@
 {
   "name": "is-strictly-seven",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple utility to check if a number or string is seven.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
