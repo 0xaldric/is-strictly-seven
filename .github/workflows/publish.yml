@@ -19,6 +19,8 @@ jobs:
           else
             echo "SUCCESS: NODE_AUTH_TOKEN is set (length is ${#NODE_AUTH_TOKEN})"
           fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
